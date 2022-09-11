@@ -6,13 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Hexo</title>
+  <title>统计学习方法 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="本文是作者作为一名初学者对李航老师的统计学习方法一书的学习心得，仅供参考。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="统计学习方法">
+<meta property="og:url" content="http://example.com/2022/09/11/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="本文是作者作为一名初学者对李航老师的统计学习方法一书的学习心得，仅供参考。">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-09-11T14:26:07.000Z">
+<meta property="article:modified_time" content="2022-09-11T14:39:26.418Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -142,16 +146,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-统计学习方法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-统计学习方法" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/09/11/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/">统计学习方法</a>
+    <h1 class="article-title" itemprop="name">
+      统计学习方法
     </h1>
   
 
@@ -165,9 +167,69 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>本文是作者作为一名初学者对李航老师的统计学习方法一书的学习心得，仅供参考。</p>
-        
+<span id="more"></span>
+
+<h4 id="1-1-统计学习"><a href="#1-1-统计学习" class="headerlink" title="1.1 统计学习"></a>1.1 统计学习</h4><p>统计学习的方法如下：</p>
+<ol>
+<li>从给定的，有限的，用于学习的训练数据数据集除法</li>
+<li>假设数据是独立同分布产生的</li>
+<li>假设要学习的模型属于某个函数的集合，称为假设空间</li>
+<li>应用某个评价标准，从假设空间中选取一个最优的模型；这个模型使它对已知训练数据及未知测试数据在给定的评价标准下最优的预测</li>
+<li>最优模型的选取由算法实现</li>
+</ol>
+<p>统计学习方法的步骤如下：</p>
+<ol>
+<li>得到一个有限的训练数据集</li>
+<li>确定包含所有可能的模型假设空间，即学习模型的集合</li>
+<li>确定模型选择的准则，即学习的策略</li>
+<li>实现求解最优模型的算法，即学习的算法</li>
+<li>通过学习方法选择最优的模型</li>
+<li>利用学习的最优模型对新数据进行预测或分析</li>
+</ol>
+<h4 id="1-2-统计学习分类"><a href="#1-2-统计学习分类" class="headerlink" title="1.2 统计学习分类"></a>1.2 统计学习分类</h4><p>统计学习主要包括：监督学习，非监督学习，半监督学习，强化学习</p>
+<ol>
+<li><p>监督学习<br>输入空间：将输入所有可能取值的集合称为输入空间<br>输出空间：将输出所有可能取值的集合称为输出空间，通常输出空间远小于输入空间<br>特征空间：每个具体的输入是一个实例，通常由特征向量表示。这时，所有的特征向量存在的空间称为特征空间。特征空间中的每一维对应于每一个特征。</p>
+<p>监督学习从训练数据集合中学习模型，对测试数据进行预测。训练数据输入和输出对组成，训练集通常表示为<br>$T &#x3D; {(x_1,y_1),(x_2,y_2)…(x_n,y_n)}$<br>测试数据也由相应的输入和输出对组成。输入和输出对又称为样本或样本点。</p>
+<p>联合概率分布：监督学习假设输入和输出的随机变量x和y遵循联合概率分布P(x,y),P(x,y)表示分布函数(分布密度函数)<br>假设空间：监督学习的目的在于学习一个由输入到输出的映射，这一映射由模型来表示。模型属于由输入空间到输出空间的映射的集合，这个集合就是假设空间。</p>
+<p>概率模型&#x2F;条件概率分布：$P(y|x)$<br>非概率模型&#x2F;决策函数：$y &#x3D; f(x)$<br>![[Pasted image 20220905204509.png]]</p>
+</li>
+<li><p>无监督学习<br>无监督学习是指从无标注的数据中学习预测模型的机器学习问题。无标注数据是指自然获得的数据，并未进行人为加工。预测模型表示的数据类别，转换或概率。<br>无监督学习的模型：函数$z &#x3D; g_\theta(x)$ (硬聚类)，条件概率分布$P_\theta(z|x)$（软聚类），条件概率分布$P_\theta(x|z)$（概率模型估计）<br>![[Pasted image 20220905204522.png]]</p>
+</li>
+<li><p>强化学习<br>强化学习是指智能系统在与环境的连续互动中学习最优行为策略的机器学习问题。<br>![[Pasted image 20220905204419.png]]<br>强化学习的马尔可夫决策过程是状态，奖励，动作序列上的随机过程，由五元组$&lt;S,A,P, r,\gamma&gt;$ 组成。</p>
+<ol>
+<li>S是有限状态的集合</li>
+<li>A是有限动作的集合</li>
+<li>P是状态转移概率函数：$P(s’|s,a) &#x3D; P(s_{t+1} &#x3D; s’|s_t &#x3D; s,a_t &#x3D; a)$</li>
+<li>r是奖励函数：$r(s,a) &#x3D; E(r_{t+1}|s_t &#x3D; s,a_t &#x3D; a)$</li>
+<li>$\gamma$是衰减系数：$\gamma \in [0,1]$</li>
+</ol>
+</li>
+</ol>
+<hr>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -176,16 +238,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/09/11/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/">全文阅读 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/09/11/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2022/09/10/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -200,76 +321,32 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/09/10/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2022/09/10/hello-world/" class="archive-article-date">
-  	<time datetime="2022-09-10T14:41:55.412Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/09/10/hello-world/">全文阅读 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0"><span class="toc-number">1.</span> <span class="toc-text">1.1 统计学习</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E5%88%86%E7%B1%BB"><span class="toc-number">2.</span> <span class="toc-text">1.2 统计学习分类</span></a></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
+  
+  
+  
 
   
+
+  
+
   
 
 
@@ -292,8 +369,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
